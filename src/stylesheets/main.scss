@@ -1,0 +1,14 @@
+@import 'config/variables';
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background: $c-accent;
+}
+body {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $s-small;
+}
