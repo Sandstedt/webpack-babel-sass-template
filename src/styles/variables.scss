@@ -1,0 +1,83 @@
+// SPACING
+$s-xsmall: 7px;
+$s-small: 14px;
+$s-medium: 28px;
+$s-large: 56px;
+$s-xlarge: 112px;
+
+// BREAKPOINTS
+$mq-xs: 320px;
+$mq-sm: 576px;
+$mq-md: 768px;
+$mq-lg: 1025px;
+$mq-xl: 1900px;
+
+// COLORS
+$c-primary: #75ffef;
+$c-black:#000;
+$c-white: #fff;
+$c-neutral-1: #f7f7fa;
+$c-neutral-2: #f2f2f5;
+$c-neutral-3: #e8e8f0;
+$c-neutral-4: #a9a9b2;
+$c-neutral-5: #5f5f66;
+$c-neutral-6: #222226;
+
+// semantic colors
+$c-danger: #FF5A38;
+$c-warning: #ffc107;
+$c-info: #33A9D4;
+$c-success: #3FBB15;
+
+// Shadows (box-shadow)
+$shadow-hidden: 0px 0px 0px 0 rgba(174, 181, 216, 0.2);
+$shadow-0: $shadow-hidden;
+$shadow-1: 0px 2px 20px 0 rgba(174, 181, 216, 0.2); // level 1
+$shadow-1-up: 0px -2px 20px 0 rgba(174, 181, 216, 0.2); // level 1 upwards
+$shadow-2: 2px 4px 40px 0 rgba(174, 181, 216, 0.15); // level 2
+$shadow-2-up: 2px -4px 40px 0 rgba(174, 181, 216, 0.15); // level 2 upwards
+$shadow-2_5: 2px 4px 20px 0 rgba(174, 181, 216, 0.4); // level 2.5
+$shadow-3: 2px 4px 40px 0 rgba(174, 181, 216, 1); // level 3
+$shadow-small: 1px 4px 12px 0 rgba(174, 181, 216, 0.4); // for small ui elements that need a lift
+
+// TYPOGRAPHY
+$f-primary: 'Roboto', sans-serif;
+$f-bold: 700;
+
+// FONT BODY
+$f-body-font: $f-primary;
+$f-body-size: 0.875rem; // 14px
+$f-body-height: 1.1428571429; // 16px
+$f-body-weight: 400;
+$f-body-color: $c-black;
+$f-body-letterspacing: 0;
+// Usage:
+// @include f-body($align, $color);
+@mixin f-body ($align: null, $color: $f-body-color) {
+  @if ($align) {
+    text-align: $align;
+  }
+  font-family: $f-body-font;
+  font-size: $f-body-size;
+  line-height: $f-body-height;
+  font-weight: $f-body-weight;
+  color: $color;
+  letter-spacing: $f-body-letterspacing;
+}
+
+// ANIMATION
+// Speed / duration / animation
+$t-base: 0.4s;
+$t-short: 0.2s;
+$t-long: 0.6s;
+$t-fast: $t-short;
+$t-slow: $t-long;
+// Easings
+$e-out: cubic-bezier(0.11, 0.29, 0.18, 0.98);
+$e-in: cubic-bezier(0.65, 0.01, 1, 1);
+$e-inout: cubic-bezier(0.31, 0.01, 0, 0.98);
+// OTHER SETTINGS
+$b-width: 2px;
+$b-radius: 2px;
+$b-radius-large: 4px;
+$b: 1px solid $c-neutral-3;

@@ -1,0 +1,98 @@
+@import './normalize.css.scss';
+@import './variables.scss';
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+	height: 100%;
+  background-color: $c-neutral-1;
+}
+
+html {
+  @include f-body();
+}
+
+* { box-sizing: border-box; margin: 0 }
+
+// Default extra typography spacing
+p {
+  margin-bottom: 0
+}
+//KOLLA HÄR
+
+p+*:not(ul),
+ol+*,
+ul+*,
+blockquote+* {
+  margin-top: 2em; // em instead of rem for more space on headings
+}
+// img:not(.illustration, .icon)+*,
+p+p, img+p {
+  margin-top: 1em;
+}
+figcaption {
+  margin-top: 1em;
+}
+
+// Heading spacings (sort of h1-h6)
+.heading+p,
+.hero-subheading+p,
+.subheading+p,
+.section-heading+p {
+  margin-top: $s-small;
+}
+.smallheading+p,
+.section-subheading+p {
+  margin-top: $s-xsmall;
+}
+
+a {
+  // -ms-word-break: break-all;
+  // word-break: break-all; // Non standard for webkit
+  // word-break: break-word;
+  // -webkit-hyphens: auto;
+  // -moz-hyphens: auto;
+  // hyphens: auto;
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img, iframe, video {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+img {
+  font-size: 1rem;
+  color: inherit;
+}
+
+code {
+  font-size: $f-body-size;
+  background: rgba($c-info, 0.2);
+  // outline: 4px solid rgba($c-info, 0.2);
+}
+
+input {
+  // remove iOS input shadow
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+th {
+  text-align: inherit;
+}

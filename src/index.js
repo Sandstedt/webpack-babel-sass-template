@@ -1,6 +1,6 @@
-import 'normalize.css'
-import 'stylesheets/main'
+import 'normalize.css';
+import 'styles/index.scss';
 
-import test from 'javascripts/test'
+import test from 'views/test';
 
-document.body.appendChild( test() )
+document.body.appendChild( test() );

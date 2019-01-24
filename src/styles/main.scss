@@ -1,9 +1,9 @@
-@import 'config/variables';
+@import 'variables';
 * { box-sizing: border-box; }
 
 html, body {
   height: 100%;
-  background: $c-accent;
+  background-color: $c-primary;
 }
 body {
   font-family: sans-serif;
